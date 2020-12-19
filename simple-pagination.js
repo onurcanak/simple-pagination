@@ -11,13 +11,19 @@
             pageNumberActiveClass   : '',
             pageNumberHoverClass    : '',
             callback                : function(){
-                console.log('hello world')
+                throwError('Callback function is not specified.')
             }
         }
 
         const OPTIONS = $.extend({}, DEFAULT_OPTIONS, options)
+        console.log(OPTIONS)
+        OPTIONS.callback.call(this, OPTIONS.dataSource)
 
-        console.log(OPTIONS) 
+        /**
+         * Function to throw an error
+         * @param {*} errMsg : Error message to throw
+         */
+        var throwError = (errMsg) => { throw new Error(errMsg) }
 
     }
 
