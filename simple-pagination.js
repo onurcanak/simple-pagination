@@ -85,6 +85,9 @@
             let dataStartIndex  = (selectedPageNum - 1) * OPTIONS.maxItemsPerPage
             let dataEndIndex    = (selectedPageNum * OPTIONS.maxItemsPerPage)
             OPTIONS.callback(OPTIONS.dataSource.slice(dataStartIndex, dataEndIndex))    // pass partial data through callback function
+
+            // !!! BURADA BAR MODİFY EDİLECEK !!!
+
         })
 
         //#endregion
